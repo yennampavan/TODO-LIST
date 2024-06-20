@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.root {
+  background-color: rgb(20, 145, 254);
+  padding: 40px 40px 40px 40px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh
+}
+
+.todo-root {
+  width: 500px;
+}
+
+.title {
+  width: 100%;
+  background-color: white;
+  color:  rgb(20, 145, 254);
+  padding: 20px;
+}
+
+.title h1 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.list {
+  list-style-type: square;
+  margin-top: 3rem;
+  margin-left: 40px;
+}
+
+.list li {
   color: white;
+  font-size: 18px;
+  margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.addField {
+  margin-top: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.addField input {
+  height: 40px;
+  font-size: 18px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 70%;
+  margin-right: 10%;
+}
+
+.addField button {
+  background-color: white;
+  border: 0;
+  color: rgb(20, 145, 254);
+  height: 40px;
+  text-align: center;
+  width: 20%;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  margin-bottom: 2rem;
+}
+
+.list-item li {
+  width: 300px;
+}
+
+.list-item button {
+  height: 35px;
+  background-color: red;
+  color: #FFF;
+  outline: none;
+  border: 0;
+  width: 70px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.list-item .edit-btn {
+  background-color: greenyellow;
+  color: #000;
+  margin-left: 10px;
+}
+
+.edit-modal {
+  position: absolute;
+  top: 20%;
+  left: 34%;
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  box-shadow: 2px 3px 5px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal-footer {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.update-btn,
+.close-btn {
+  background-color: greenyellow;
+  color: #000;
+  margin-left: 10px;
+  border: 0;
+  outline: 0;
+  padding: 12px;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.close-btn {
+  background-color: red;
+  color: #FFF;
+}
+
+.edit-modal input {
+  height: 40px;
+  margin-top: auto;
+  width: 300px;
+  font-size: 18px;
+  padding-left: 8px;
 }
